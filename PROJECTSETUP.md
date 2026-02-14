@@ -1,8 +1,9 @@
 # Project Setup
 
-1. Create virtual environment (root of project)
+1. Create  and enter virtual environment (root of project)
     ```sh
     python3 -m venv fprime-venv
+    . fprime-venv/bin/activate
     ```
 2. Install requirements.txt in fprime
     ```sh
@@ -17,18 +18,24 @@
 4. Install all these arduino-cli related code
     ```sh
     cd ../../..
+
     curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=$VIRTUAL_ENV/bin sh
+
     pip install arduino-cli-cmake-wrapper
+
     arduino-cli config init
+
     arduino-cli config add board_manager.additional_urls https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
+
     arduino-cli core update-index
+    
     arduino-cli core install STMicroelectronics:stm32
     ```
 5. Run fprime-util generate
     ```sh
     fprime-util generate
     ```
-
+    
 ## Building the project
 
 1. If you already have the folders build-artifacts and build-fprime-automatic-FeatherM4_FreeRTOS in your project, delete them. Unzip build.zip in the google drive
