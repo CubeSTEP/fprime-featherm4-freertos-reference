@@ -28,3 +28,17 @@
     ```sh
     fprime-util generate
     ```
+
+## Building the project
+
+1. Unzip build.zip
+
+2. In build-fprime-automatic-FeatherM4_FreeRTOS, you need to change the path in the cmake files because it is currently hardcoded only for my Mac. I have not located all 
+the cmake files that need to be changed, but some that I have spotted include:
+    - cmake_install.cmake
+    - fprime_module_info.cmake 
+
+3. Run the build command 
+    ```sh
+    fprime-util build
+    ```
