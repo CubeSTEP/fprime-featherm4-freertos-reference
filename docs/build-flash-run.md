@@ -35,7 +35,7 @@ The following command will spin up the F' GDS as well as run the application bin
 # In fprime-nucleo_h723zg_freertos_reference (fprime-venv)
 
 # Linux/Windows WSL (has only been tested with ubuntu 22.04)
-fprime-gds -n --dictionary build-artifacts/nucleo_H723ZG_FreeRTOSS/ReferenceDeployment/dict/ReferenceDeploymentTopologyDictionary.json --communication-selection uart --uart-device /dev/ttyACM0 --uart-baud 115200 --framing-selection fprime
+fprime-gds -n --dictionary build-artifacts/nucleo_H723ZG_FreeRTOS/ReferenceDeployment/dict/ReferenceDeploymentTopologyDictionary.json --communication-selection uart --uart-device /dev/ttyACM0 --uart-baud 115200 --framing-selection fprime
 
 # MacOS
 fprime-gds -n --dictionary build-artifacts/nucleo_H723ZG_FreeRTOS/ReferenceDeployment/dict/ReferenceDeploymentTopologyDictionary.json --communication-selection uart --uart-device /dev/cu.usbmodem142101 --uart-baud 115200 
